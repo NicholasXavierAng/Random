@@ -2,7 +2,7 @@
 # Takes a guess and its corresponding result before returning a list of possible remaining words.
 
 words = []
-with open("wordle-test.txt", "r") as f:
+with open("wordle-answers-alphabetical.txt", "r") as f:
     for word in f:
         words.append(word.strip())
 possible_words = []
