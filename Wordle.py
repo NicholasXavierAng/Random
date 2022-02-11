@@ -10,6 +10,7 @@ possible_words = []
 while 1:
     while 1:
         guess = input("What is your guess: ")
+        guess = guess.lower()
         print()
         
         if len(guess) != 5 or guess.isalpha() == False:
@@ -49,7 +50,7 @@ while 1:
             if result[i] == "=" and word[i] != guess[i]:
                 is_pos_word = False
                 break
-            elif result[i] == "+" and guess[i] not in word:
+            elif result[i] == "+" and (guess[i] not in word or guess[i] == word[i]):
                 is_pos_word = False
                 break
             elif result[i] == "-" and guess[i] in word:
